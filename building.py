@@ -2,9 +2,16 @@ from classroom import Classroom
 
 
 class AcademicBuilding:
-    def __init__(self, adress, classrooms):
+    """
+    Class for classroom representation
+    """
+    def __init__(self, address, classrooms):
+        """
+         (Classroom, str, int, list) -> NoneType
+        Create new classroom
+        """
         self.classrooms = classrooms[:]
-        self.adress = adress
+        self.address = address
 
     def total_equipment(self):
         tot_equipment = dict()
@@ -17,5 +24,5 @@ class AcademicBuilding:
         return [(i, tot_equipment[i]) for i in tot_equipment]
 
     def __str__(self):
-        return self.adress + "\n" + "\n".join(
+        return self.address + "\n" + "\n".join(
             [str(i) for i in (self.classrooms)])

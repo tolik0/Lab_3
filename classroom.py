@@ -2,6 +2,7 @@ class Classroom:
     """
     Class for classroom representation
     """
+
     def __init__(self, number, capacity, equipment):
         """
          (Classroom, str, int, list) -> NoneType
